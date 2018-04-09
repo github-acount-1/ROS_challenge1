@@ -34,8 +34,6 @@ class turtlesim_gui():
        self.app.addButtons(["Right", "Left"], self.press)
        self.app.addButtons(["Circular", "Stop"], self.press)
        
-	#app.setFocus("Username")
-
 	# start the GUI
        self.app.go()
        #app.stop()'''
@@ -76,8 +74,6 @@ class turtlesim_gui():
        vel_msg.angular.y = 0
        vel_msg.angular.z = 0
        
-    #   while not rospy.is_shutdown():
-   
            #Setting the current time for distance calculus
        t0 = rospy.Time.now().to_sec()
        current_distance = 0
