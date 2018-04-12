@@ -1,0 +1,15 @@
+<launch>
+    <!-- Turtlesim Node-->
+    <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+
+    <node name="two_turtles_move" pkg="two_turtles" type="two_turtles_move.py" respawn="false" output="screen" >
+      <param name="turtle" type="string" value="turtle1" />
+    </node>
+    <node name="two2_turtles_move" pkg="two_turtles" type="two_turtles_move.py" respawn="false" output="screen" >
+      <param name="turtle" type="string" value="turtle2" /> 
+    </node>
+   <node pkg="two_turtles" type="two_turtles_list.py" 
+          name="listener" />
+
+  </launch>
